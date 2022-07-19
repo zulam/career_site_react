@@ -1,220 +1,418 @@
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+/* Add a black background color to the top navigation */
 .topnav {
-    position: fixed;  z-index: 100; width: 100%; background-color: rgb(20, 20, 20);
+  position: fixed;  z-index: 100; width: 100%; background-color: rgb(20, 20, 20);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}  
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+#title {
+  width: 650px;
+  margin: auto;  
+  text-align: center;
+  color: white; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bio {
+  position: absolute;
+  top: 100%;
+  left: 50%; 
+  transform: translate(-50%, 0%);
+  color: white;
+  font-size: 200%;
+}
+#detail-container {
+  position: absolute;
+  width: 100vw;
+  top: 150%; 
+  left: 50%; 
+  transform: translate(-50%, 0%); 
+  text-align: center; 
+  display: flex; 
+  direction: row;
+  justify-content: space-evenly;
+}
+.sec-parent {
+  width: 20%;
+}
+.sec-header { 
+  color: white; 
+  margin: auto;
+  font-size: 280%;
+}
+.sec-year {
+  margin: auto; 
+  font-size: 135%;
+}
+
+.sec-detail {
+  margin: auto; 
+  color: white;
+  font-size: 135%; 
+  display: none;
+  width: 75%
+}
+#contact-container {
+  position: absolute;
+  top: 190%;
+  left: 50%; 
+  transform: translate(-50%, 0%);
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+} 
+body {
+  background: linear-gradient(-45deg, #414141, #291414, #1d2130, #2b2b2b);
+  background-size: 400% 500%;
+  animation: gradient 15s ease infinite;
+}
+
+.red-color{
+color: rgb(204, 108, 108)
+}
+
+.blue-color {
+color: rgb(115, 144, 219)
+}
+
+.ally-color {
+color: rgb(139, 91, 139)
+}
+
+.infocision-color {
+color: rgb(61, 116, 71)
+}
+
+.sylvan-color {
+color: rgb(68, 81, 133)
+}
+
+.white-color{ 
+color: white;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 65% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+.sec-parent:hover > .sec-detail {
+-webkit-animation: fadein .6s; /* Safari, Chrome and Opera > 12.1 */
+-moz-animation: fadein .6s; /* Firefox < 16 */
+ -ms-animation: fadein .6s; /* Internet Explorer */
+  -o-animation: fadein .6s; /* Opera < 12.1 */
+     animation: fadein .6s;
+height: 30px;
+display: block;
+}
+.pad-bottom {
+  padding-bottom: 150px;
+}
+
+.page-header {
+  font-size: 500%;
+}
+
+.fa:not(.fa-bars) {
+    padding: 20px;
+    font-size: 40px;
+    width: 78px;
+    height: 78px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    display:inline-block;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+ 
+.creds {
+  color: rgb(153, 0, 0);
+  font-style: italic;
+}
+
+  .creds:hover {
+    transition: transform .1s; 
+    transform: scale(1.1);
+  }
+
+  .a {
+    color: rgb(153, 0, 0)
+  }
+
+  .musicfeels:hover {
+    transform: scale(1.05);
+    transition: transform .1s; 
   }
   
-  .pad-bottom {
-    padding-bottom: 150px;
+  .fa-links:hover {
+    /* opacity: 0.7; */
+    transform: scale(1.1);
+    color: inherit;
+    text-decoration: none;
+    transition: transform .1s; 
+  }
+
+  .fa-soundcloud {
+    background: #ec5700;
+    color: white;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
   }
   
-  .nav-item {
-    font-size: 120%;
-    color: rgb(212, 212, 212);
-    padding-left: .8%;
-    padding-right: .8%;
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram{
+    display: inline-block;
+    color: #fff;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    margin-left: 0.5%;
   }
   
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
+  .fa-linkedin {
+    background: #2867B2;
+    color: white;
+    margin-right: 0.5%;
   }
-  
-  @media screen and (max-width:1200px) {
-    .remove-photo1 {
-      display: none;
-    }
+
+  .fa-github {
+    background: #211F1F;
+    color: white;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
   }
-  
-  @media screen and (max-width: 900px) {
-    .remove-photo2 {
-      display: none;
-    }
+
+  .resume-header {
+    font-size: xx-large
   }
-  
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-    .remove-photo3 {
-      display: none;
-    }
+
+  .resume { 
+    text-align: center;
+    font-family: optima; 
+    font-weight: bold; 
+    font-size: 300%; 
+    color: rgb(44, 44, 44);
+    background-color: rgba(95, 158, 160, 0.5);
+    border-radius: 30px;
   }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
+
+  .list {
+    list-style-position: inside; 
+    font-weight: normal; 
+    font-size: 50%; 
+    text-align: justify; 
+    padding-left: 18%;
+    padding-right: 18%;
+    color: rgb(44, 44, 44);
+    padding-bottom: 1%;
   }
-  
-  .page-header {
-    font-size: 500%;
+
+  .start {
+    object-position: bottom;
+    opacity: 0;
   }
-  
-  .fa {
-      padding: 15px;
-      font-size: 40px;
-      width: 75px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 50%;
-      display:inline-block;
-      box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+
+  .visible {
+    opacity: 100%;
   }
-   
-  .creds {
+
+  .top {
+    opacity: 1;
+    color: #fff;
+  }
+
+  .fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.2s linear;
+  }
+
+  .fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+
+
+  /* #navbar {
+    overflow: hidden;
+  } */
+
+  ul {
+    list-style: none; /* Remove default bullets */
+  }
+
+  /*Placeholder colors*/
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(153, 0, 0);
-    font-style: italic;
+    opacity: 1; /* Firefox */
   }
   
-    .creds:hover {
-      transition: transform .1s; 
-      transform: scale(1.1);
-    }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(153, 0, 0);
+  }
   
-    .a {
-      color: rgb(153, 0, 0)
-    }
-  
-    .musicfeels:hover {
-      transform: scale(1.05);
-      transition: transform .1s; 
-    }
-    
-    .fa-links:hover {
-      /* opacity: 0.7; */
-      transform: scale(1.1);
-      color: inherit;
-      text-decoration: none;
-      transition: transform .1s; 
-    }
-  
-    .fa-soundcloud {
-      background: #ec5700;
-      color: white;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-    }
-  
-    .fa-facebook {
-      background: #3B5998;
-      color: white;
-    }
-    
-    .fa-twitter {
-      background: #55ACEE;
-      color: white;
-    }
-  
-    .fa-instagram{
-      display: inline-block;
-      color: #fff;
-      background: #d6249f;
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-      box-shadow: 0px 3px 10px rgba(0,0,0,.25);
-      margin-left: 0.5%;
-    }
-    
-    .fa-linkedin {
-      background: #2867B2;
-      color: white;
-      margin-right: 0.5%;
-    }
-  
-    .fa-github {
-      background: #211F1F;
-      color: white;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-    }
-  
-    .resume-header {
-      font-size: xx-large
-    }
-  
-    .resume { 
-      text-align: center;
-      font-family: optima; 
-      font-weight: bold; 
-      font-size: 300%; 
-      color: rgb(44, 44, 44);
-      background-color: rgba(95, 158, 160, 0.5);
-      border-radius: 30px;
-    }
-  
-    .list {
-      list-style-position: inside; 
-      font-weight: normal; 
-      font-size: 50%; 
-      text-align: justify; 
-      padding-left: 18%;
-      padding-right: 18%;
-      color: rgb(44, 44, 44);
-      padding-bottom: 1%;
-    }
-  
-    .start {
-      object-position: bottom;
-      opacity: 0;
-    }
-  
-    .visible {
-      opacity: 100%;
-    }
-  
-    .top {
-      opacity: 1;
-      color: #fff;
-    }
-  
-    .fade-out {
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 0s 0.5s, opacity 0.2s linear;
-    }
-  
-    .fade-in {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 0.2s linear;
-    }
-  
-    .content {
-      padding: 16px;
-    }
-  
-  
-  
-    /* #navbar {
-      overflow: hidden;
-    } */
-  
-    ul {
-      list-style: none; /* Remove default bullets */
-    }
-  
-    /*Placeholder colors*/
-  
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: rgb(153, 0, 0);
-      opacity: 1; /* Firefox */
-    }
-    
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: rgb(153, 0, 0);
-    }
-    
-    ::-ms-input-placeholder { /* Microsoft Edge */
-      color: rgb(153, 0, 0);
-    }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(153, 0, 0);
+  }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #title{
+    top: 35vh;
+    width:70vw;
+  }
+  #title > .title-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 8vw !important;
+    text-align: left;
+  }
+  #bio {
+    top:50vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4.5vw !important;
+  }
+  #detail-container {
+    top:100vh;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5vw !important;
+  }
+  .sec-parent:hover > .sec-detail {
+    -webkit-animation: none; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: none;/* Firefox < 16 */
+     -ms-animation: none; /* Internet Explorer */
+      -o-animation: none; /* Opera < 12.1 */
+         animation: none;
+         height: inherit;
+         display: inherit;
+  }
+  #contact-container {
+    top: 210vh;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  #contact-label > {
+    font-size: 40px !important;
+  }
+  .sec-parent {
+    width: 80%;
+    padding-bottom: 50px;
+  }
+  .sec-detail {
+    display: block;
+    width: 90%;
+  }
+}
    
    
