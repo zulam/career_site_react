@@ -93,7 +93,7 @@ html, body {
 body {
   background: linear-gradient(-45deg, #414141, #291414, #1d2130, #2b2b2b);
   background-size: 400% 500%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 
 .red-color{
@@ -260,27 +260,6 @@ display: block;
     font-size: xx-large
   }
 
-  .resume { 
-    text-align: center;
-    font-family: optima; 
-    font-weight: bold; 
-    font-size: 300%; 
-    color: rgb(44, 44, 44);
-    background-color: rgba(95, 158, 160, 0.5);
-    border-radius: 30px;
-  }
-
-  .list {
-    list-style-position: inside; 
-    font-weight: normal; 
-    font-size: 50%; 
-    text-align: justify; 
-    padding-left: 18%;
-    padding-right: 18%;
-    color: rgb(44, 44, 44);
-    padding-bottom: 1%;
-  }
-
   .start {
     object-position: bottom;
     opacity: 0;
@@ -358,7 +337,7 @@ display: block;
     text-align: left;
   }
   #title{
-    top: 35vh;
+    top: 45vh;
     width:70vw;
   }
   #title > .title-child {
@@ -369,20 +348,26 @@ display: block;
     text-align: left;
   }
   #bio {
-    top:50vh;
+    top:60vh;
     width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 4.5vw !important;
+    font-size: 4vw !important;
   }
   #detail-container {
     top:100vh;
-    width: 75%;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 3.5vw !important;
+    font-size: 3vw !important;
+  }
+  #contact-label {
+    font-size: 8vw !important;
+  }
+  #contact-info {
+    font-size: 5vw !important;
   }
   .sec-parent:hover > .sec-detail {
     -webkit-animation: none; /* Safari, Chrome and Opera > 12.1 */
@@ -392,18 +377,6 @@ display: block;
          animation: none;
          height: inherit;
          display: inherit;
-  }
-  #contact-container {
-    top: 210vh;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    text-align: center;
-  }
-  #contact-label > {
-    font-size: 40px !important;
   }
   .sec-parent {
     width: 80%;

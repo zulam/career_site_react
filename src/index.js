@@ -77,7 +77,7 @@ function Contact(props) {
       <h2 id="contact-label">Let's Talk!</h2>
       <a style={{marginRight: '5px'}} href="https://www.linkedin.com/in/zack-ulam-605220132/" className="fa fa-links fa-linkedin fa-2x " target="_blank"/>
       <a style={{marginLeft: '5px'}} href="https://github.com/zulam" className="fa fa-links fa-2x  fa-github" target="_blank"/>
-      <h4 className='contact-info'>
+      <h4 id='contact-info'>
         Zachary.Ulam@Gmail.com <br/> (330) 883-8896
       </h4>
     </div>
