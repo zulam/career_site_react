@@ -253,7 +253,6 @@ display: block;
     background: #211F1F;
     color: white;
     margin-left: 0.5%;
-    margin-right: 0.5%;
   }
 
   .resume-header {
@@ -364,6 +363,8 @@ display: block;
     font-size: 3vw !important;
   }
   #contact-label {
+    margin: 5px;
+    padding: 5px;
     font-size: 8vw !important;
   }
   #contact-info {

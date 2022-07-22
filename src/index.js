@@ -74,12 +74,12 @@ function Title(props) {
 function Contact(props) {
   return (
     <div ref={props.refs[3]} id='contact' className="pad-bottom" data-aos='fade-in'>
-      <h2 id="contact-label">Let's Talk!</h2>
+      <p id="contact-label">Let's Talk!</p>
       <a style={{marginRight: '5px'}} href="https://www.linkedin.com/in/zack-ulam-605220132/" className="fa fa-links fa-linkedin fa-2x " target="_blank"/>
       <a style={{marginLeft: '5px'}} href="https://github.com/zulam" className="fa fa-links fa-2x  fa-github" target="_blank"/>
-      <h4 id='contact-info'>
+      <p id='contact-info'>
         Zachary.Ulam@Gmail.com <br/> (330) 883-8896
-      </h4>
+      </p>
     </div>
   )
 }
