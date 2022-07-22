@@ -88,8 +88,8 @@ function Bio(props) {
   //const style={color:'white', fontSize: '200%'}
   return (
     <p id='bio' ref={props.refs[1]} data-aos='fade-in'>
-      My passions are centered around creativity: web design, coding, music, and dreaming about my latest side hustle idea, to name a few.<br/><br/>
-      I have been coding since 2015, but my passion grows for it daily.
+      My passions are centered around creativity: web development, music, and dreaming about my latest side hustle idea, to name a few.<br/><br/>
+      I began coding in 2015, and have thoroughly enjoyed the journey so far.
     </p>
   )
 }
