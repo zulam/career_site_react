@@ -62,8 +62,8 @@ function Title(props) {
     <div id='title' ref={props.refs[0]}>
     <br/><br/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-      <h3 className='title-child' style={{fontSize: "300%", textAlign: 'left'}}>I'm <span class={'red-color'}>Zack Ulam.</span></h3>
-      <h3 className='title-child' style={{fontSize: "300%", textAlign: 'left'}}>I am a <span class={'blue-color'}>full-stack web developer.</span></h3><br/>
+      <h3 className='title-child' style={{fontSize: "300%", textAlign: 'left'}}>I'm <span class={'red-color'}>Zack Ulam,</span></h3>
+      <h3 className='title-child' style={{fontSize: "300%", textAlign: 'left'}}>a <span class={'blue-color'}>full-stack web developer.</span></h3><br/>
       <br/><br/><br/><br/>
       {/* <a href="https://soundcloud.com/zackulam" className="fa fa-links  fa-soundcloud" target="_blank"></a>
       <a href="https://www.instagram.com/musicfeelsreviews/" className="fa fa-links  fa-instagram" target="_blank"></a><br/><br/> */}
@@ -88,7 +88,7 @@ function Bio(props) {
   //const style={color:'white', fontSize: '200%'}
   return (
     <p id='bio' ref={props.refs[1]} data-aos='fade-in'>
-      My passions are centered around creativity: web development, music, and dreaming about my latest side hustle idea, to name a few.<br/><br/>
+      My passions include web development, music, and family, to name a few.<br/><br/>
       I began coding in 2015, and have thoroughly enjoyed the journey so far.
     </p>
   )
