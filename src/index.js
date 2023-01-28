@@ -13,7 +13,7 @@ import AOS from 'aos'
 
 
 function Nav(props) {
-  const links = ['ZackUlam', 'Bio', 'Work', 'Contact']
+  const links = ['Zack Ulam', 'Bio', 'Work', 'Contact']
 
   const handleClick = (ref) => {
     ref.current.scrollIntoView({
@@ -49,6 +49,8 @@ function Nav(props) {
         <a href="javascript:void(0);" class="icon" onClick={() => expand()}>
           <i class="fa fa-bars"></i>
         </a>
+          <a style={{float: 'right'}} href="https://www.linkedin.com/in/zack-ulam-605220132/" className="fa fa-nav fa-linkedin" target="_blank"/>
+          <a style={{float: 'right'}} href="https://github.com/zulam" className=" fa fa-nav fa-github" target="_blank"/>
         </nav>
         <form>
         </form>
@@ -74,10 +76,8 @@ function Title(props) {
 function Contact(props) {
   return (
     <div ref={props.refs[3]} id='contact' className="pad-bottom" data-aos='fade-in'>
-      <p id="contact-label">Let's Talk!</p>
-      <a style={{marginRight: '5px'}} href="https://www.linkedin.com/in/zack-ulam-605220132/" className="fa fa-links fa-linkedin fa-2x " target="_blank"/>
-      <a style={{marginLeft: '5px'}} href="https://github.com/zulam" className="fa fa-links fa-2x  fa-github" target="_blank"/>
-      <p id='contact-info'>
+      <p id="contact-label" style={{fontSize: '3.5vw'}}>Let's Talk!</p>
+      <p id='contact-info' style={{fontSize: '1.5vw'}}>
         Zachary.Ulam@Gmail.com <br/> (330) 883-8896
       </p>
     </div>
