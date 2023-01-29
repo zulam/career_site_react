@@ -42,15 +42,20 @@ function Nav(props) {
     <>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <nav id="myTopNav" className="topnav">
-        { links.map((link, c) => (
-          <a class='nav-item' onClick={() => handleClick(props.refs[c])} key={link}>{link}</a>
-        )) 
+        { links.map((link, c) => {
+          if (link=='Zack Ulam') {
+            return <>
+              <a class='nav-item' onClick={() => handleClick(props.refs[c])} key={link}>{link}</a>
+              <a href="https://www.linkedin.com/in/zack-ulam-605220132/" className="fa fa-nav fa-linkedin" target="_blank"/>
+              <a href="https://github.com/zulam" className=" fa fa-nav fa-github" target="_blank"/>
+            </>
+          }
+        return <a class='nav-item' onClick={() => handleClick(props.refs[c])} key={link}>{link}</a>
+        }) 
         }
         <a href="javascript:void(0);" class="icon" onClick={() => expand()}>
           <i class="fa fa-bars"></i>
         </a>
-          <a style={{float: 'right'}} href="https://www.linkedin.com/in/zack-ulam-605220132/" className="fa fa-nav fa-linkedin" target="_blank"/>
-          <a style={{float: 'right'}} href="https://github.com/zulam" className=" fa fa-nav fa-github" target="_blank"/>
         </nav>
         <form>
         </form>
@@ -61,11 +66,11 @@ function Nav(props) {
 function Title(props) {
   //const titleStyle = {width: '650px', margin: 'auto', textAlign:"center", color: "white", position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'};
   return (
-    <div id='title' ref={props.refs[0]}>
+    <div id='title' ref={props.refs[0]} style={{display: 'flex', flexDirection: 'row'}}>
     <br/><br/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-      <h3 className='title-child' style={{fontSize: "300%", textAlign: 'left'}}>I'm <span class={'red-color'}>Zack Ulam,</span></h3>
-      <h3 className='title-child' style={{fontSize: "300%", textAlign: 'left'}}>a <span class={'blue-color'}>full-stack web developer.</span></h3><br/>
+      <img id='profileImage' src={require("./images/PortfolioPic.png")} width={'20%'} height={'20%'} style={{borderRadius: '10px', marginRight: '20px'}}/><br/>
+      <h3 className='title-child' style={{fontSize: "3vw", textAlign: 'left'}}>I'm <span class={'red-color'}>Zack Ulam,</span> a <span class={'blue-color'}>full-stack web developer.</span></h3>
       <br/><br/><br/><br/>
       {/* <a href="https://soundcloud.com/zackulam" className="fa fa-links  fa-soundcloud" target="_blank"></a>
       <a href="https://www.instagram.com/musicfeelsreviews/" className="fa fa-links  fa-instagram" target="_blank"></a><br/><br/> */}
@@ -109,9 +114,9 @@ function Sec(props) {
       <p id={props.body} className='sec-year' ref={ref} style={yearStyle}>
         {props.location} | {props.year}
       </p>
-      <p id={props.body} className='sec-detail'>
-        {props.body}
-      </p>
+      <div id={props.body} className='sec-detail' style={{marginTop: '5px', height: '5vw', borderRadius: '5px', backgroundColor: props.color}}>
+          {props.body}
+      </div>
   </div>
   );
 }
