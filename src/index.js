@@ -2,13 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import logo from './logo.svg';
 import './App.css';
 import './styles.css'
 import {useRef} from 'react';
-import { Select, CaretIcon, ModalCloseButton } from 'react-responsive-select';
-import { isCompositeComponentWithType } from 'react-dom/test-utils';
-import userEvent from '@testing-library/user-event';
 import AOS from 'aos'
 
 
@@ -64,16 +60,13 @@ function Nav(props) {
 }
 
 function Title(props) {
-  //const titleStyle = {width: '650px', margin: 'auto', textAlign:"center", color: "white", position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'};
   return (
-    <div id='title' ref={props.refs[0]} style={{display: 'flex', flexDirection: 'row'}}>
-    <br/><br/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-      <img id='profileImage' src={require("./images/PortfolioPic.png")} width={'20%'} height={'20%'} style={{borderRadius: '10px', marginRight: '20px'}}/><br/>
-      <h3 className='title-child' style={{fontSize: "3vw", textAlign: 'left'}}>I'm <span class={'red-color'}>Zack Ulam,</span> a <span class={'blue-color'}>full-stack web developer.</span></h3>
+    <div id='title' ref={props.refs[0]}>
+      <br/><br/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <img id='profile-image' src={require("./images/PortfolioPic.png")}/><br/>
+      <h3 id='title-child'>I'm <span class={'red-color'}>Zack Ulam,</span> a <span class={'blue-color'}>full-stack web developer.</span></h3>
       <br/><br/><br/><br/>
-      {/* <a href="https://soundcloud.com/zackulam" className="fa fa-links  fa-soundcloud" target="_blank"></a>
-      <a href="https://www.instagram.com/musicfeelsreviews/" className="fa fa-links  fa-instagram" target="_blank"></a><br/><br/> */}
     </div>
   );
 }
@@ -81,8 +74,8 @@ function Title(props) {
 function Contact(props) {
   return (
     <div ref={props.refs[3]} id='contact' className="pad-bottom" data-aos='fade-in'>
-      <p id="contact-label" style={{fontSize: '3.5vw'}}>Let's Talk!</p>
-      <p id='contact-info' style={{fontSize: '1.5vw'}}>
+      <p id="contact-label">Let's Talk!</p>
+      <p id='contact-info'>
         Zachary.Ulam@Gmail.com <br/> (330) 883-8896
       </p>
     </div>
@@ -101,9 +94,6 @@ function Bio(props) {
 
 function Sec(props) {
   const ref = useRef(null);
-
-  const headStyle = {color: 'white', margin: 'auto', fontSize: '280%'};
-  const bodyStyle = {color: 'white', margin: 'auto', fontSize: '135%', display: 'none'};
   const yearStyle = {color: props.color};
 
   return (
@@ -114,7 +104,7 @@ function Sec(props) {
       <p id={props.body} className='sec-year' ref={ref} style={yearStyle}>
         {props.location} | {props.year}
       </p>
-      <div id={props.body} className='sec-detail' style={{marginTop: '5px', height: '5vw', borderRadius: '5px', backgroundColor: props.color}}>
+      <div id={props.body} className='sec-detail' style={{backgroundColor: props.color}}>
           {props.body}
       </div>
   </div>
@@ -132,11 +122,7 @@ function App() {
   const secs = [
     ['Ally Bank', 'Full-stack web developer using .NET and standard web stack.', '#b37cc2', '2018-2019', 'Charlotte, NC'],
     ['InfoCision', 'Developer for call center technologies using .NET.', '#92bf8c', '2020-2021', 'Akron, OH'], 
-      ['Sylvan Technologies', 'Full-stack web developer using .NET and React components.', '#8694c2', '2021-2022', 'Atlanta, GA (Remote)']];
-  const bioStyle = {position: 'absolute', top: '100%', left: '50%', transform: 'translate(-50%, 0%)'}
-  const workStyle = {position: 'absolute', top: '150%', left: '50%', transform: 'translate(-50%, 0%)'}
-  const contactStyle = {position: 'absolute', top: '180%', left: '50%', transform: 'translate(-50%, 0%)'}
-  const detailsStyle={position: 'absolute', top: '150%', left: '50%', transform: 'translate(-50%, 0%)', textAlign: "center", display: "flex", justifyContent: "space-evenly"}
+    ['Sylvan Technologies', 'Full-stack web developer using .NET and React components.', '#8694c2', '2021-2022', 'Atlanta, GA (Remote)']];
   const fontStyle={fontFamily: 'Roboto,  sans-serif'}
   return (
     <body>
